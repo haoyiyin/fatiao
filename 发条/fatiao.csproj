@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A386DCE2-DCD1-4D63-B3DF-770B48343D06}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>fatiao</RootNamespace>
+    <AssemblyName>发条</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>fatiao.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>fatiao.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gma.System.MouseKeyHook, Version=5.6.130.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Gma.System.MouseKeyHook.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Steamworks.NET, Version=14.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Steamworks.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SQLite.EF6.1.0.113.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.InteropServices" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Thread" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tesseract, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tesseract.4.1.1\lib\net45\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="代码文件\运行流程.cs" />
+    <Compile Include="动作窗口\字符拼接.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\字符拼接.Designer.cs">
+      <DependentUpon>字符拼接.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\steam创意工坊.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\steam创意工坊.Designer.cs">
+      <DependentUpon>steam创意工坊.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\winapp界面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\winapp界面.Designer.cs">
+      <DependentUpon>winapp界面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\上传文件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\上传文件.Designer.cs">
+      <DependentUpon>上传文件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\停止运行.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\停止运行.Designer.cs">
+      <DependentUpon>停止运行.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\删除文件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\删除文件.Designer.cs">
+      <DependentUpon>删除文件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\点击图片.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\点击图片.Designer.cs">
+      <DependentUpon>点击图片.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\输出日志.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\输出日志.Designer.cs">
+      <DependentUpon>输出日志.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\点击位置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\点击位置.Designer.cs">
+      <DependentUpon>点击位置.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\获取时间.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\获取时间.Designer.cs">
+      <DependentUpon>获取时间.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\读写文件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\读写文件.Designer.cs">
+      <DependentUpon>读写文件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\获取缩放率.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\获取缩放率.Designer.cs">
+      <DependentUpon>获取缩放率.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\变量赋值.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\变量赋值.Designer.cs">
+      <DependentUpon>变量赋值.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\获取剪贴板.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\获取剪贴板.Designer.cs">
+      <DependentUpon>获取剪贴板.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\获取设备码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\获取设备码.Designer.cs">
+      <DependentUpon>获取设备码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\请求输入.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\请求输入.Designer.cs">
+      <DependentUpon>请求输入.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\启动器.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\启动器.Designer.cs">
+      <DependentUpon>启动器.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\快捷菜单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\快捷菜单.Designer.cs">
+      <DependentUpon>快捷菜单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\截图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\截图.Designer.cs">
+      <DependentUpon>截图.cs</DependentUpon>
+    </Compile>
+    <Compile Include="代码文件\拖放载入.cs" />
+    <Compile Include="窗体文件\生成程序.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\生成程序.Designer.cs">
+      <DependentUpon>生成程序.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\用户输入窗.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\用户输入窗.Designer.cs">
+      <DependentUpon>用户输入窗.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\判断按键.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\判断按键.Designer.cs">
+      <DependentUpon>判断按键.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\判断窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\判断窗口.Designer.cs">
+      <DependentUpon>判断窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\发送邮件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\发送邮件.Designer.cs">
+      <DependentUpon>发送邮件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\结束进程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\结束进程.Designer.cs">
+      <DependentUpon>结束进程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\发条.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\发条.Designer.cs">
+      <DependentUpon>发条.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\下载文件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\下载文件.Designer.cs">
+      <DependentUpon>下载文件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\写到剪贴板.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\写到剪贴板.Designer.cs">
+      <DependentUpon>写到剪贴板.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\判断画面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\判断画面.Designer.cs">
+      <DependentUpon>判断画面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\判断颜色.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\判断颜色.Designer.cs">
+      <DependentUpon>判断颜色.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\发送文本.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\发送文本.Designer.cs">
+      <DependentUpon>发送文本.cs</DependentUpon>
+    </Compile>
+    <Compile Include="代码文件\动作类型.cs" />
+    <Compile Include="代码文件\编辑动作.cs" />
+    <Compile Include="窗体文件\触发条件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\触发条件.Designer.cs">
+      <DependentUpon>触发条件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\触边滚轮.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\触边滚轮.Designer.cs">
+      <DependentUpon>触边滚轮.cs</DependentUpon>
+    </Compile>
+    <Compile Include="代码文件\触边钩子.cs" />
+    <Compile Include="动作窗口\运行快捷命令.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\运行快捷命令.Designer.cs">
+      <DependentUpon>运行快捷命令.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\随机数字.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\随机数字.Designer.cs">
+      <DependentUpon>随机数字.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\运行与打开.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\运行与打开.Designer.cs">
+      <DependentUpon>运行与打开.cs</DependentUpon>
+    </Compile>
+    <Compile Include="代码文件\快捷命令.cs" />
+    <Compile Include="窗体文件\工具字幕.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\工具字幕.Designer.cs">
+      <DependentUpon>工具字幕.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\弹幕.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\弹幕.Designer.cs">
+      <DependentUpon>弹幕.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\新增快捷命令.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\新增快捷命令.Designer.cs">
+      <DependentUpon>新增快捷命令.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\计算时间差.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\计算时间差.Designer.cs">
+      <DependentUpon>计算时间差.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\消息提示.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\消息提示.Designer.cs">
+      <DependentUpon>消息提示.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\打开网址.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\打开网址.Designer.cs">
+      <DependentUpon>打开网址.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\如果事件.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\如果事件.Designer.cs">
+      <DependentUpon>如果事件.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\查找图片.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\查找图片.Designer.cs">
+      <DependentUpon>查找图片.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\查找颜色.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\查找颜色.Designer.cs">
+      <DependentUpon>查找颜色.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\注释.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\注释.Designer.cs">
+      <DependentUpon>注释.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\基于平面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\基于平面.Designer.cs">
+      <DependentUpon>基于平面.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\蜂鸣提醒.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\蜂鸣提醒.Designer.cs">
+      <DependentUpon>蜂鸣提醒.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\系统电源.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\系统电源.Designer.cs">
+      <DependentUpon>系统电源.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\设置窗口.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\设置窗口.Designer.cs">
+      <DependentUpon>设置窗口.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\整数运算.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\整数运算.Designer.cs">
+      <DependentUpon>整数运算.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="动作窗口\跳出循环.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\跳出循环.Designer.cs">
+      <DependentUpon>跳出循环.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\循环过程.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\循环过程.Designer.cs">
+      <DependentUpon>循环过程.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\等待时间.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\等待时间.Designer.cs">
+      <DependentUpon>等待时间.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\按键操作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\按键操作.Designer.cs">
+      <DependentUpon>按键操作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\选取范围.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\选取范围.Designer.cs">
+      <DependentUpon>选取范围.cs</DependentUpon>
+    </Compile>
+    <Compile Include="窗体文件\鸣谢与声明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="窗体文件\鸣谢与声明.Designer.cs">
+      <DependentUpon>鸣谢与声明.cs</DependentUpon>
+    </Compile>
+    <Compile Include="动作窗口\鼠标操作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="动作窗口\鼠标操作.Designer.cs">
+      <DependentUpon>鼠标操作.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="动作窗口\字符拼接.resx">
+      <DependentUpon>字符拼接.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\steam创意工坊.resx">
+      <DependentUpon>steam创意工坊.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\winapp界面.resx">
+      <DependentUpon>winapp界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\上传文件.resx">
+      <DependentUpon>上传文件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\停止运行.resx">
+      <DependentUpon>停止运行.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\删除文件.resx">
+      <DependentUpon>删除文件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\点击位置.resx">
+      <DependentUpon>点击位置.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\点击图片.resx">
+      <DependentUpon>点击图片.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\输出日志.resx">
+      <DependentUpon>输出日志.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\获取时间.resx">
+      <DependentUpon>获取时间.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\读写文件.resx">
+      <DependentUpon>读写文件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\获取缩放率.resx">
+      <DependentUpon>获取缩放率.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\变量赋值.resx">
+      <DependentUpon>变量赋值.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\获取剪贴板.resx">
+      <DependentUpon>获取剪贴板.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\获取设备码.resx">
+      <DependentUpon>获取设备码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\请求输入.resx">
+      <DependentUpon>请求输入.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\启动器.resx">
+      <DependentUpon>启动器.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\截图.resx">
+      <DependentUpon>截图.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\生成程序.resx">
+      <DependentUpon>生成程序.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\用户输入窗.resx">
+      <DependentUpon>用户输入窗.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\判断按键.resx">
+      <DependentUpon>判断按键.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\判断窗口.resx">
+      <DependentUpon>判断窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\发送邮件.resx">
+      <DependentUpon>发送邮件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\结束进程.resx">
+      <DependentUpon>结束进程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\发条.resx">
+      <DependentUpon>发条.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\下载文件.resx">
+      <DependentUpon>下载文件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\写到剪贴板.resx">
+      <DependentUpon>写到剪贴板.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\判断画面.resx">
+      <DependentUpon>判断画面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\判断颜色.resx">
+      <DependentUpon>判断颜色.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\发送文本.resx">
+      <DependentUpon>发送文本.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\触发条件.resx">
+      <DependentUpon>触发条件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\触边滚轮.resx">
+      <DependentUpon>触边滚轮.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\运行快捷命令.resx">
+      <DependentUpon>运行快捷命令.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\随机数字.resx">
+      <DependentUpon>随机数字.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\运行与打开.resx">
+      <DependentUpon>运行与打开.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\工具字幕.resx">
+      <DependentUpon>工具字幕.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\弹幕.resx">
+      <DependentUpon>弹幕.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\新增快捷命令.resx">
+      <DependentUpon>新增快捷命令.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\计算时间差.resx">
+      <DependentUpon>计算时间差.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\消息提示.resx">
+      <DependentUpon>消息提示.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\打开网址.resx">
+      <DependentUpon>打开网址.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\如果事件.resx">
+      <DependentUpon>如果事件.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\查找图片.resx">
+      <DependentUpon>查找图片.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\查找颜色.resx">
+      <DependentUpon>查找颜色.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\注释.resx">
+      <DependentUpon>注释.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\基于平面.resx">
+      <DependentUpon>基于平面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\蜂鸣提醒.resx">
+      <DependentUpon>蜂鸣提醒.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\系统电源.resx">
+      <DependentUpon>系统电源.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\设置窗口.resx">
+      <DependentUpon>设置窗口.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\跳出循环.resx">
+      <DependentUpon>跳出循环.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\循环过程.resx">
+      <DependentUpon>循环过程.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\等待时间.resx">
+      <DependentUpon>等待时间.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\整数运算.resx">
+      <DependentUpon>整数运算.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\按键操作.resx">
+      <DependentUpon>按键操作.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\选取范围.resx">
+      <DependentUpon>选取范围.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="窗体文件\鸣谢与声明.resx">
+      <DependentUpon>鸣谢与声明.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="动作窗口\鼠标操作.resx">
+      <DependentUpon>鼠标操作.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fatiao.ico" />
+    <None Include="Resources\启用轮盘.png" />
+    <None Include="Resources\轮盘.png" />
+    <None Include="Resources\高亮左.png" />
+    <None Include="Resources\高亮右.png" />
+    <None Include="Resources\高亮下.png" />
+    <None Include="Resources\高亮上.png" />
+    <None Include="Resources\高亮关闭.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\打开文件.png" />
+    <None Include="Resources\悬停最小化窗口.png" />
+    <None Include="Resources\悬停关闭窗口.png" />
+    <None Include="Resources\最小化窗口.png" />
+    <None Include="Resources\关闭窗口.png" />
+    <None Include="Resources\关闭变量.png" />
+    <None Include="Resources\开启变量.png" />
+    <None Include="Resources\点亮变量.png" />
+    <None Include="Resources\fatiao.png" />
+    <None Include="Resources\日志.png" />
+    <None Include="Resources\QQ群.png" />
+    <None Include="Resources\重启.png" />
+    <None Include="Resources\登陆发条.png" />
+    <None Include="Resources\用户协议.png" />
+    <None Include="Resources\用户社区.png" />
+    <None Include="Resources\快捷命令.png" />
+    <None Include="Resources\打开快捷命令.png" />
+    <None Include="Resources\discord.png" />
+    <None Include="Resources\清空变量.png" />
+    <None Include="Resources\删除变量.png" />
+    <None Include="Resources\编辑器.png" />
+    <None Include="Resources\窗口信息.png" />
+    <None Include="Resources\截图取色.png" />
+    <None Include="Resources\坐标.png" />
+    <None Include="Resources\粘贴.png" />
+    <None Include="Resources\停用.png" />
+    <None Include="Resources\清空.png" />
+    <None Include="Resources\删除.png" />
+    <None Include="Resources\退出发条.png" />
+    <None Include="Resources\小程序.png" />
+    <None Include="Resources\流程.png" />
+    <None Include="Resources\创意工坊.png" />
+    <None Include="Resources\生成.png" />
+    <None Include="Resources\打开.png" />
+    <None Include="Resources\调试.png" />
+    <None Include="Resources\缓停止.png" />
+    <None Include="Resources\停止.png" />
+    <None Include="Resources\继续.png" />
+    <None Include="Resources\暂停.png" />
+    <None Include="Resources\运行.png" />
+    <None Include="Resources\清除.png" />
+    <None Include="Resources\搜索.png" />
+    <None Include="Resources\信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\动作\动作库.csproj">
+      <Project>{5b664197-a3c8-4f78-a21c-64c15e6b1e95}</Project>
+      <Name>动作库</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Tesseract.4.1.1\build\Tesseract.targets" Condition="Exists('packages\Tesseract.4.1.1\build\Tesseract.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Tesseract.4.1.1\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Tesseract.4.1.1\build\Tesseract.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
+</Project>

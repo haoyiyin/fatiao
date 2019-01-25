@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="fatiao.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="执行次数" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="运行快捷键" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ctrl + F10</Value>
+    </Setting>
+    <Setting Name="暂停快捷键" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ctrl + F11</Value>
+    </Setting>
+    <Setting Name="调试快捷键" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ctrl + F12</Value>
+    </Setting>
+    <Setting Name="开机自启动" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="最小化启动" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="触边滚轮1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">音量减</Value>
+    </Setting>
+    <Setting Name="触边滚轮2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">音量加</Value>
+    </Setting>
+    <Setting Name="触边滚轮3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">静音</Value>
+    </Setting>
+    <Setting Name="触边滚轮4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮7" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮8" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮9" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮10" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮11" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="触边滚轮12" Type="System.String" Scope="User">
+      <Value Profile="(Default)">无</Value>
+    </Setting>
+    <Setting Name="运行完成勾选" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="鼠标面板" Type="System.String" Scope="User">
+      <Value Profile="(Default)">鼠标中键</Value>
+    </Setting>
+    <Setting Name="启用面板" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="轮盘上" Type="System.String" Scope="User">
+      <Value Profile="(Default)">打开资源管理器</Value>
+    </Setting>
+    <Setting Name="轮盘下" Type="System.String" Scope="User">
+      <Value Profile="(Default)">新建记事本</Value>
+    </Setting>
+    <Setting Name="轮盘左" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Emoji表情</Value>
+    </Setting>
+    <Setting Name="轮盘右" Type="System.String" Scope="User">
+      <Value Profile="(Default)">截图到剪贴板</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
